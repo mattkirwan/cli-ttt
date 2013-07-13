@@ -5,9 +5,7 @@
 int main()
 {
 	TicTacToe Game;
-	Player Player;
-
-	Player.current = 1;
+	Player CurrentPlayer;
 	
 	Game.welcome();
 	Game.drawBoard();
@@ -15,8 +13,10 @@ int main()
 	bool finished = false;
 
 	while(!finished) {
-		Game.newMove();
+		Game.newMove(CurrentPlayer);
 		Game.drawBoard();
+
+		CurrentPlayer.change();
 
 		finished = Game.isFinished();
 	}

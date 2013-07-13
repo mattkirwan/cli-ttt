@@ -1,5 +1,6 @@
 #ifndef TICTACTOE_H
 #define TICTACTOE_H
+#include "player.h"
 
 class TicTacToe
 {
@@ -9,7 +10,7 @@ class TicTacToe
 		TicTacToe();
 		void welcome() const;
 		void drawBoard() const;
-		void newMove();
+		void newMove(Player current);
 		bool isFinished() const;
 		bool isTie() const;
 };

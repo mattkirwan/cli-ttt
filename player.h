@@ -4,8 +4,9 @@
 class Player
 {
 	public:
+		Player();
 		int current;
-		int change();
+		void change();
 };
 
 #endif

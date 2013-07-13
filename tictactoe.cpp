@@ -25,11 +25,11 @@ void TicTacToe::drawBoard() const
 	std::cout << "\n\n\n";
 }
 
-void TicTacToe::newMove()
+void TicTacToe::newMove(Player current_player)
 {
 	int row;
 	int col;
-
+	std::cout << "Player " << current_player.current << " is up!\n";
 	std::cout << "Choose row: \n";
 	std::cin >> row;
 	std::cout << "Choose col: \n";
