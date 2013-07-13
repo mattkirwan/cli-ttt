@@ -9,6 +9,8 @@ class TicTacToe
 		TicTacToe();
 		void welcome() const;
 		void drawBoard() const;
+		void newMove();
+		bool isFinished() const;
 		bool isTie() const;
 };
 

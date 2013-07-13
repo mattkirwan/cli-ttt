@@ -6,23 +6,15 @@ int main()
 	TicTacToe Game;
 	
 	Game.welcome();
-
 	Game.drawBoard();
 
-	int i = 0;
-	
-	do
-	{
-		if(i > 10)
-		{
-			break;
-		}
+	bool finished = false;
 
-		std::cout << "Loop\n";
-		
-		i++;
+	while(!finished) {
+		Game.newMove();
+		Game.drawBoard();
+
+		finished = Game.isFinished();
 	}
-	while( !Game.isTie() );
-
 	return 0;
 }

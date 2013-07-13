@@ -25,6 +25,31 @@ void TicTacToe::drawBoard() const
 	std::cout << "\n\n\n";
 }
 
+void TicTacToe::newMove()
+{
+	int row;
+	int col;
+
+	std::cout << "Choose row: \n";
+	std::cin >> row;
+	std::cout << "Choose col: \n";
+	std::cin >> col;
+
+	if (row + col == 2) {
+		position[0] = 1;
+	}
+}
+
+bool TicTacToe::isFinished() const
+{
+	for(int i = 0; i < 9; i++) {
+		if (position[i] == 0) {
+			return false;
+		}
+	}
+	return true;
+}
+
 bool TicTacToe::isTie() const
 {
 	return false;
