@@ -54,6 +54,8 @@ void TicTacToe::newMove(Player current_player)
 		3,2 = 5 	a + b
 		3,3 = 8 	(a + b) + (b - a) + a - 1
 	*/
+
+	// Sets the value of the tile to the player ID (1 or 2)
 	if (row == 1) {
 		position[col - row] = current_player.current;
 	}
