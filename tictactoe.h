@@ -3,10 +3,12 @@
 
 class TicTacToe
 {
+	private:
+		int position[9];
 	public:
 		TicTacToe();
 		void welcome();
-		int test_property;
+		void drawBoard();
 };
 
 #endif

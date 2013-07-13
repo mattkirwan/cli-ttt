@@ -4,7 +4,10 @@
 int main()
 {
 	TicTacToe Game;
+	
 	Game.welcome();
-	Game.test_property;
+
+	Game.drawBoard();
+
 	return 0;
 }
