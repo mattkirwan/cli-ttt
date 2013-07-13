@@ -32,11 +32,11 @@ bool TicTacToe::isTie() const
 {
 	if(total_turns == 9)
 	{
-		tsd::cout << "Game ties! Your both losers.\n"
-		return 1;
+		std::cout << "Game ties! Your both losers.\n"
+		return true;
 	}
 
-	return 0;
+	return false;
 }
 
 void TicTacToe::makeMove()
