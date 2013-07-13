@@ -14,7 +14,6 @@ class TicTacToe
 	public:
 		
 		TicTacToe();
-		void welcome() const;
 		void drawBoard() const;
 		bool isTie() const;
 		void makeMove(Player &current_player);

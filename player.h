@@ -9,6 +9,7 @@ class Player
 		unsigned short int player_id;
 		Player();
 		unsigned short int changePlayer();
+		char getPlayerMarker() const;
 };
 
 #endif

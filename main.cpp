@@ -5,16 +5,15 @@
 int main()
 {
 	TicTacToe Game;
-	Player Player;
-
-	Game.welcome();
-	Game.drawBoard();
+	Player CurrentPlayer;
 	
+	Game.drawBoard();
+
 	do
 	{
-		Game.makeMove(Player);
+		Game.makeMove(CurrentPlayer);
 		Game.drawBoard();
-		Game.nextTurn(Player);
+		Game.nextTurn(CurrentPlayer);
 	}
 	while( !Game.isTie() );
 

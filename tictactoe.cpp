@@ -13,11 +13,6 @@ TicTacToe::TicTacToe()
 	}
 }
 
-void TicTacToe::welcome() const
-{
-	std::cout << "\n\n    Welcome to Tic Tac Toe!\n";
-}
-
 void TicTacToe::drawBoard() const
 {
 	std::cout << std::string(50, '\n');
@@ -45,8 +40,6 @@ void TicTacToe::makeMove(Player &current_player)
 {
 	std::cout << "Make your move player " << current_player.player_id << ":";
 
-	//std::cout << current_player.player_id;
-
 	int player_move;
 
 	do
@@ -56,7 +49,7 @@ void TicTacToe::makeMove(Player &current_player)
 	}
 	while(player_move < 0 || player_move > 8 || position[player_move] != 0);
 
-	position[player_move] = current_player.player_id;
+	position[player_move] = current_player.getPlayerMarker();
 }
 
 unsigned short int TicTacToe::nextTurn(Player &current_player)

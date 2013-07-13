@@ -15,3 +15,13 @@ unsigned short int Player::changePlayer()
 
 	return player_id;
 }
+
+char Player::getPlayerMarker() const
+{
+	if(player_id == 1)
+	{
+		return 'X';
+	}
+
+	return 'O';
+}
