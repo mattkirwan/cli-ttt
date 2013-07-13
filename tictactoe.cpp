@@ -1,10 +1,10 @@
 #include <iostream>
 #include <string>
 #include "tictactoe.h"
+#include "player.h"
 
 TicTacToe::TicTacToe()
 {
-	player = 1;
 	total_turns = 0;
 
 	for(int i = 0; i < 9; i++)
@@ -41,9 +41,11 @@ bool TicTacToe::isTie() const
 	return false;
 }
 
-void TicTacToe::makeMove()
+void TicTacToe::makeMove(Player &current_player)
 {
-	std::cout << "Make your move player " << player << ":";
+	std::cout << "Make your move player " << current_player.player_id << ":";
+
+	//std::cout << current_player.player_id;
 
 	int player_move;
 
@@ -54,15 +56,12 @@ void TicTacToe::makeMove()
 	}
 	while(player_move < 0 || player_move > 8 || position[player_move] != 0);
 
-	position[player_move] = player;
+	position[player_move] = current_player.player_id;
 }
 
-void TicTacToe::nextTurn()
+unsigned short int TicTacToe::nextTurn(Player &current_player)
 {
 	total_turns++;
 
-	if(++player > NUMBER_PLAYERS)
-	{
-		player = 1;
-	}
+	return current_player.changePlayer();
 }

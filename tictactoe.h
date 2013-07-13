@@ -1,7 +1,7 @@
 #ifndef TICTACTOE_H
 #define TICTACTOE_H
 
-const unsigned short int NUMBER_PLAYERS = 2;
+#include "player.h"
 
 class TicTacToe
 {
@@ -17,8 +17,8 @@ class TicTacToe
 		void welcome() const;
 		void drawBoard() const;
 		bool isTie() const;
-		void makeMove();
-		void nextTurn();
+		void makeMove(Player &current_player);
+		unsigned short int nextTurn(Player &current_player);
 };
 
 #endif
