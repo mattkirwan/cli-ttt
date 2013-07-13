@@ -32,6 +32,7 @@ bool TicTacToe::isTie() const
 {
 	if(total_turns == 9)
 	{
+		tsd::cout << "Game ties! Your both losers.\n"
 		return 1;
 	}
 
