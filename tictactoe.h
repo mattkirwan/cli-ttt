@@ -6,10 +6,13 @@ const unsigned short int NUMBER_PLAYERS = 2;
 class TicTacToe
 {
 	private:
-		int position[9];
-		int player;
-		int total_turns;
+		
+		unsigned short int position[9];
+		unsigned short int player;
+		unsigned short int total_turns;
+	
 	public:
+		
 		TicTacToe();
 		void welcome() const;
 		void drawBoard() const;
