@@ -3,14 +3,14 @@
 
 Player::Player()
 {
-	current = 1;
+    current = 1;
 }
 
 void Player::change()
 {
-	if (current == 1) {
-		current = 2;
-	} else {
-		current = 1;
-	}
+    if (current == 1) {
+        current = 2;
+    } else {
+        current = 1;
+    }
 }

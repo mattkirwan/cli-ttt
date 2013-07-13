@@ -3,10 +3,10 @@
 
 class Player
 {
-	public:
-		Player();
-		int current;
-		void change();
+    public:
+        Player();
+        int current;
+        void change();
 };
 
 #endif

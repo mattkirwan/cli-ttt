@@ -4,21 +4,21 @@
 
 int main()
 {
-	TicTacToe Game;
-	Player CurrentPlayer;
-	
-	Game.welcome();
-	Game.drawBoard();
+    TicTacToe Game;
+    Player CurrentPlayer;
+    
+    Game.welcome();
+    Game.drawBoard();
 
-	bool finished = false;
+    bool finished = false;
 
-	while(!finished) {
-		Game.newMove(CurrentPlayer);
-		Game.drawBoard();
+    while(!finished) {
+        Game.newMove(CurrentPlayer);
+        Game.drawBoard();
 
-		CurrentPlayer.change();
+        CurrentPlayer.change();
 
-		finished = Game.isFinished();
-	}
-	return 0;
+        finished = Game.isFinished();
+    }
+    return 0;
 }
