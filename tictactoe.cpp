@@ -35,9 +35,17 @@ void TicTacToe::newMove(Player current_player)
 	std::cout << "Choose col: \n";
 	std::cin >> col;
 
-	if (row + col == 2) {
-		position[0] = 1;
+	if (row == 1) {
+		if (row + col == 2) {
+			position[0] = current_player.current;
+		}
+		if (row < col) {
+			position[row + col] = current_player.current;
+		} else {
+			position[row - col] = current_player.current;
+		}
 	}
+
 }
 
 bool TicTacToe::isFinished() const
