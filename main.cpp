@@ -18,8 +18,8 @@ int main()
 			break;
 		}
 
-		std::cout << "Loop\n";
-		
+		std::cout << "Loop\n" << NUMBER_PLAYERS;
+
 		i++;
 	}
 	while( !Game.isTie() );
