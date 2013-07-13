@@ -30,22 +30,42 @@ void TicTacToe::newMove(Player current_player)
 	int row;
 	int col;
 	std::cout << "Player " << current_player.current << " is up!\n";
-	std::cout << "Choose row: \n";
-	std::cin >> row;
 	std::cout << "Choose col: \n";
 	std::cin >> col;
+	std::cout << "Choose row: \n";
+	std::cin >> row;
+
+/*
+	This is the login I came up with, it leaves us with
+	3 if statements. Not sure if it's good enough. It
+	works well though.
+	
+	C R
+	1,1 = 0		a - b
+	1,2 = 3 	a + b
+	1,3 = 6 	(a + b) + (b - a) + a - 1
+
+	2,1 = 1 	a - b
+	2,2 = 4 	a + b
+	2,3 = 7 	(a + b) + (b - a) + a - 1
+
+	3,1 = 2 	a - b
+	3,2 = 5 	a + b
+	3,3 = 8 	(a + b) + (b - a) + a - 1
+*/
 
 	if (row == 1) {
-		if (row + col == 2) {
-			position[0] = current_player.current;
-		}
-		if (row < col) {
-			position[row + col] = current_player.current;
-		} else {
-			position[row - col] = current_player.current;
-		}
+		position[col - row] = current_player.current;
 	}
 
+	if (row == 2) {
+		position[col + row] = current_player.current;
+	}
+
+	if (row == 3) {
+		int p = ((col + row) + (row - col)) + col - 1;
+		position[p] = current_player.current;
+	}
 }
 
 bool TicTacToe::isFinished() const
