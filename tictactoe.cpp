@@ -9,12 +9,12 @@ TicTacToe::TicTacToe()
 	}
 }
 
-void TicTacToe::welcome()
+void TicTacToe::welcome() const
 {
 	std::cout << "\n\n    Welcome to Tic Tac Toe!\n";
 }
 
-void TicTacToe::drawBoard()
+void TicTacToe::drawBoard() const
 {
 	std::cout << "          \n";
 	std::cout << "          " << position[0] << "|" << position[1] << "|" << position[2];

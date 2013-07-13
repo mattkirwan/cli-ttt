@@ -7,8 +7,8 @@ class TicTacToe
 		int position[9];
 	public:
 		TicTacToe();
-		void welcome();
-		void drawBoard();
+		void welcome() const;
+		void drawBoard() const;
 };
 
 #endif
