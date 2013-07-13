@@ -58,7 +58,7 @@ void TicTacToe::nextTurn()
 {
 	total_turns++;
 
-	if(player > NUMBER_PLAYERS)
+	if(++player > NUMBER_PLAYERS)
 	{
 		player = 1;
 	}
