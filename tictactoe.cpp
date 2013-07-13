@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "tictactoe.h"
 
 TicTacToe::TicTacToe()
@@ -19,6 +20,7 @@ void TicTacToe::welcome() const
 
 void TicTacToe::drawBoard() const
 {
+	std::cout << std::string(50, '\n');
 	std::cout << "          \n";
 	std::cout << "          " << position[0] << "|" << position[1] << "|" << position[2];
 	std::cout << "\n          -|-|-\n";
