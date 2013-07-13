@@ -18,9 +18,11 @@ int main()
 			break;
 		}
 
-		Game.takeTurn();
+		Game.makeMove();
 
-		std::cout << "Loop\n" << NUMBER_PLAYERS;
+		Game.drawBoard();
+
+		Game.nextTurn();
 
 		i++;
 	}

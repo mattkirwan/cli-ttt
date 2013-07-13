@@ -4,6 +4,7 @@
 TicTacToe::TicTacToe()
 {
 	player = 1;
+	total_turns = 0;
 
 	for(int i = 0; i < 9; i++)
 	{
@@ -29,10 +30,36 @@ void TicTacToe::drawBoard() const
 
 bool TicTacToe::isTie() const
 {
-	return false;
+	if(total_turns == 9)
+	{
+		return 1;
+	}
+
+	return 0;
 }
 
-void TicTacToe::takeTurn() const
+void TicTacToe::makeMove()
 {
-	std::cout << "Player " << player << "'s turn: ";
+	std::cout << "Make your move player " << player << ":";
+
+	int player_move;
+
+	do
+	{
+		std::cin >> player_move;
+		player_move--;
+	}
+	while(player_move < 0 || player_move > 8 || position[player_move] != 0);
+
+	position[player_move] = player;
+}
+
+void TicTacToe::nextTurn()
+{
+	total_turns++;
+
+	if(player > NUMBER_PLAYERS)
+	{
+		player = 1;
+	}
 }
