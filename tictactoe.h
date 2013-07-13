@@ -9,6 +9,7 @@ class TicTacToe
 		TicTacToe();
 		void welcome() const;
 		void drawBoard() const;
+		bool isTie() const;
 };
 
 #endif

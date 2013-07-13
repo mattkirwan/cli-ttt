@@ -24,3 +24,8 @@ void TicTacToe::drawBoard() const
 	std::cout << "          " << position[6] << "|" << position[7] << "|" << position[8];
 	std::cout << "\n\n\n";
 }
+
+bool TicTacToe::isTie() const
+{
+	return false;
+}
