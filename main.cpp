@@ -18,6 +18,8 @@ int main()
 			break;
 		}
 
+		Game.takeTurn();
+
 		std::cout << "Loop\n" << NUMBER_PLAYERS;
 
 		i++;

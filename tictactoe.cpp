@@ -3,6 +3,8 @@
 
 TicTacToe::TicTacToe()
 {
+	player = 1;
+
 	for(int i = 0; i < 9; i++)
 	{
 		position[i] = 0;
@@ -28,4 +30,9 @@ void TicTacToe::drawBoard() const
 bool TicTacToe::isTie() const
 {
 	return false;
+}
+
+void TicTacToe::takeTurn() const
+{
+	std::cout << "Player " << player << "'s turn: ";
 }
