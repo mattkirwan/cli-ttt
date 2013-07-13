@@ -32,10 +32,10 @@ bool TicTacToe::isTie() const
 {
 	if(total_turns == 9)
 	{
-		return 1;
+		return true;
 	}
 
-	return 0;
+	return false;
 }
 
 void TicTacToe::makeMove()
